@@ -17,5 +17,5 @@ hashicorp/vault 0.6.0         1.4.3       Install and configure Vault on Kuberne
 
 ## Using Helm Charts
 ```shell
-$ helm install vault hashicorp/vault --namespace vault --version 0.5.0
+$ helm install vault hashicorp/vault --namespace vault -f values.yaml
 ```
