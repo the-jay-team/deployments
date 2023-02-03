@@ -11,13 +11,13 @@ pipeline {
                 branch 'main'
             }
             steps {
-                sh 'mkdir .ssh'
+                sh 'mkdir -p .ssh'
                 sh 'echo $SSH_PRIVATE_KEY > .ssh/id_rsa'
                 sh 'ssh -tt master01.k8s.thejay.azubi.server.lan'
                 // Checkout/Update git repo
+                sh 'rm -r deployments'
                 sh 'git clone git@github.com:the-jay-team/deployments.git'
                 sh 'cd deployments'
-                sh 'git pull'
 
                 // Prod
                 sh 'kubectl apply -f jaytube-prod/namespace.yaml'
