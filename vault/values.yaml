@@ -1,0 +1,11 @@
+ui:
+  enabled: true
+  publishNotReadyAddresses: true
+  activeVaultPodOnly: false
+  serviceType: "NodePort"
+  serviceNodePort: 30780
+  externalPort: 8200
+  targetPort: 8200
+
+dataStorage:
+  storageClass: nfs-client
