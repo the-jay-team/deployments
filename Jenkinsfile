@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        SSH_PRIVATE_KEY = credentials('97652fd4-729b-4521-8c82-9f842319461b')
+        SSH_PRIVATE_KEY = credentials('cca56d5a-1f7a-4911-8238-3b917ef90ddc')
     }
 
     stages {
