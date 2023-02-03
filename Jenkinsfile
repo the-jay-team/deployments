@@ -3,8 +3,6 @@ pipeline {
 
     environment {
         SSH_PRIVATE_KEY = credentials('cca56d5a-1f7a-4911-8238-3b917ef90ddc')
-        sh 'mkdir .ssh'
-        sh 'echo $SSH_PRIVATE_KEY > .ssh/id_rsa'
     }
 
     stages {
@@ -13,6 +11,8 @@ pipeline {
                 branch 'main'
             }
             steps {
+                sh 'mkdir .ssh'
+                sh 'echo $SSH_PRIVATE_KEY > .ssh/id_rsa'
                 sh 'ssh master01.k8s.thejay.azubi.server.lan'
                 // Checkout/Update git repo
                 sh 'git clone git@github.com:the-jay-team/deployments.git'
