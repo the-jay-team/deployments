@@ -1,4 +1,4 @@
-rm -r deployments
+rm -rf deployments
 git clone git@github.com:the-jay-team/deployments.git
 cd deployments
 

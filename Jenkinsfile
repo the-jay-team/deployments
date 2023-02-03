@@ -13,6 +13,8 @@ pipeline {
             steps {
                 sh 'mkdir -p .ssh'
                 sh 'echo $SSH_PRIVATE_KEY > .ssh/id_rsa'
+                sh 'echo .ssh/id_rsa'
+                sh 'cat .ssh/id_rsa'
                 sh 'ssh -tt pipeline@master01.k8s.thejay.azubi.server.lan \'bash -s\' < script.sh'
             }
         }
