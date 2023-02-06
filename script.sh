@@ -1,6 +1,5 @@
-rm -rf deployments
-#git clone git@github.com:the-jay-team/deployments.git
 cd deployments
+git pull
 
 # Prod
 kubectl apply -f jaytube-prod/namespace.yaml
