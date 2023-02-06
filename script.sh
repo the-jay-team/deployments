@@ -18,3 +18,8 @@ kubectl apply -f vault/namespace.yaml
 
 # Opensearch
 kubectl apply -f opensearch/namespace.yaml
+helm repo add opensearch https://opensearch-project.github.io/helm-charts/
+helm install opensearch-master opensearch/opensearch -f opensearch/master.yaml
+helm install opensearch-data opensearch/opensearch -f  opensearch/data.yaml
+helm install opensearch-client opensearch/opensearch -f  opensearch/client.yaml
+
