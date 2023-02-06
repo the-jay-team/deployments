@@ -15,3 +15,6 @@ kubectl apply -f pipeline/jenkins-service.yaml
 
 # Vault
 kubectl apply -f vault/namespace.yaml
+
+# Opensearch
+kubectl apply -f opensearch/namespace.yaml
